@@ -1,7 +1,5 @@
 package edu.umich.esandroid.findanator;
 
-import java.util.ArrayList;
-
 import android.app.Activity;
 import android.database.Cursor;
 import android.os.Bundle;

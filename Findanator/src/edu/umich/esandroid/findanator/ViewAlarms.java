@@ -89,6 +89,7 @@ public class ViewAlarms extends ListActivity
             AdapterContextMenuInfo info = (AdapterContextMenuInfo) item.getMenuInfo();
             // info.id contains the position of the item in the list view that needs to be deleted.
             mDbHelper.deleteAlarm(info.id);
+            fillData();
             return true;
         }
         return super.onContextItemSelected(item);
