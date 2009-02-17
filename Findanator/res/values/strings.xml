@@ -2,6 +2,14 @@
 <resources>
     <string name="hello">Hello World, ViewAlarms</string>
     <string name="app_name">Findanator</string>
-<string name="menu_delete_alarm">Delete Alarm</string>
-<string name="menu_add_alarm">Add Alarm</string>
+	<string name="menu_delete_alarm">Delete Alarm</string>
+	<string name="menu_add_alarm">Add Alarm</string>
+	<string name="alarm_name">Name:</string>
+	<string name="alarm_notes">Notes:</string>
+	<string name="alarm_locations">Locations:</string>
+	<string name="alarm_start_time">Start Time:</string>
+	<string name="alarm_end_time">End Time:</string>
+	<string name="alarm_done">Done</string>
+	<string name="alarm_start_date">Start Date:</string>
+	<string name="alarm_end_date">End Date:</string>
 </resources>

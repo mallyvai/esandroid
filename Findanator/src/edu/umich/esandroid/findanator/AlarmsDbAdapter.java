@@ -27,6 +27,8 @@ public class AlarmsDbAdapter
     public static final String KEY_LOCATIONS = "locations";
     public static final String KEY_START_TIME = "start_time";
     public static final String KEY_END_TIME = "end_time";
+    public static final String KEY_START_DATE = "start_date";
+    public static final String KEY_END_DATE = "end_date";
 
     private static final String TAG = "AlarmsDbAdapter";
     private DatabaseHelper mDbHelper;
@@ -38,7 +40,8 @@ public class AlarmsDbAdapter
     private static final String DATABASE_CREATE = "create table alarms "
             + "(_id integer primary key autoincrement, "
             + "name text not null, notes text, locations text not null, "
-            + "start_time text not null, end_time text not null);";
+            + "start_time text not null, end_time text not null, "
+            + "start_date text not null, end_date text not null);";
 
     private static final String DATABASE_NAME = "data";
     private static final String DATABASE_TABLE = "alarms";
@@ -122,10 +125,14 @@ public class AlarmsDbAdapter
      *            Start time to activate alarm
      * @param endTime
      *            End time to de-activate alarm
+     * @param startDate
+     *            Start date to activate alarm
+     * @param endDate
+     *            End date to de-activate alarm
      * @return rowId of created alarm, or -1
      */
     public long createAlarm(String name, String notes, String locations, String startTime,
-            String endTime)
+            String endTime, String startDate, String endDate)
     {
         ContentValues initialValues = new ContentValues();
         initialValues.put(KEY_NAME, name);
@@ -133,6 +140,8 @@ public class AlarmsDbAdapter
         initialValues.put(KEY_LOCATIONS, locations);
         initialValues.put(KEY_START_TIME, startTime);
         initialValues.put(KEY_END_TIME, endTime);
+        initialValues.put(KEY_START_DATE, startDate);
+        initialValues.put(KEY_END_DATE, endDate);
 
         return mDb.insert(DATABASE_TABLE, null, initialValues);
     }
@@ -174,14 +183,14 @@ public class AlarmsDbAdapter
     public Cursor fetchAlarm(long rowId) throws SQLException
     {
 
-        Cursor mCursor = mDb.query(true, DATABASE_TABLE, new String[] { KEY_ROWID, KEY_NAME,
-                KEY_NOTES, KEY_LOCATIONS, KEY_START_TIME, KEY_END_TIME }, KEY_ROWID + "=" + rowId,
-                null, null, null, null, null);
-        if (mCursor != null)
+        Cursor c = mDb.query(true, DATABASE_TABLE, new String[] { KEY_ROWID, KEY_NAME, KEY_NOTES,
+                KEY_LOCATIONS, KEY_START_TIME, KEY_END_TIME, KEY_START_DATE, KEY_END_DATE },
+                KEY_ROWID + "=" + rowId, null, null, null, null, null);
+        if (c != null)
         {
-            mCursor.moveToFirst();
+            c.moveToFirst();
         }
-        return mCursor;
+        return c;
 
     }
 
@@ -202,10 +211,14 @@ public class AlarmsDbAdapter
      *            updated startTime associated with alarm
      * @param endTime
      *            updated endTime associated with alarm
+     * @param startDate
+     *            updated startDate associated with alarm
+     * @param endDate
+     *            updated endDate associated with alarm
      * @return true if alarm was successfully updated, false otherwise
      */
     public boolean updateAlarm(long rowId, String name, String notes, String locations,
-            String startTime, String endTime)
+            String startTime, String endTime, String startDate, String endDate)
     {
         ContentValues args = new ContentValues();
         args.put(KEY_NAME, name);
@@ -213,6 +226,8 @@ public class AlarmsDbAdapter
         args.put(KEY_LOCATIONS, locations);
         args.put(KEY_START_TIME, startTime);
         args.put(KEY_END_TIME, endTime);
+        args.put(KEY_START_DATE, startDate);
+        args.put(KEY_END_DATE, endDate);
 
         return mDb.update(DATABASE_TABLE, args, KEY_ROWID + "=" + rowId, null) > 0;
     }

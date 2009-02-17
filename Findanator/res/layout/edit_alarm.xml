@@ -12,7 +12,7 @@
 
         <TextView android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name:" />
+            android:text="@string/alarm_name" />
 
         <EditText android:id="@+id/alarm_name"
             android:layout_width="fill_parent"
@@ -28,7 +28,7 @@
 
         <TextView android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Notes:"/>
+            android:text="@string/alarm_notes"/>
 
         <EditText android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
 
         <TextView android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Locations:"/>
+            android:text="@string/alarm_locations"/>
 
         <EditText android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -66,7 +66,7 @@
 
 	        <TextView android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:text="Start Time:"/>
+	            android:text="@string/alarm_start_time"/>
 
 	        <EditText android:layout_width="fill_parent"
 	            android:layout_height="wrap_content"
@@ -81,7 +81,7 @@
 
 	        <TextView android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:text="End Time:"/>
+	            android:text="@string/alarm_end_time"/>
 
 	        <EditText android:layout_width="fill_parent"
 	            android:layout_height="wrap_content"
@@ -91,10 +91,47 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/alarm_start_date"/>
+
+            <EditText android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/alarm_start_date"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/alarm_end_date"/>
+
+            <EditText android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/alarm_end_date"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
     <Button android:id="@+id/done"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Done" />
+        android:text="@string/alarm_done" />
 
 
 </LinearLayout>

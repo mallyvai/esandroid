@@ -14,6 +14,8 @@ public class EditAlarm extends Activity
     private EditText mLocations;
     private EditText mStartTime;
     private EditText mEndTime;
+    private EditText mStartDate;
+    private EditText mEndDate;
     private Button mDone;
 
     private Long mRowId;
@@ -35,6 +37,8 @@ public class EditAlarm extends Activity
         mLocations = (EditText) findViewById(R.id.alarm_locations);
         mStartTime = (EditText) findViewById(R.id.alarm_start_time);
         mEndTime = (EditText) findViewById(R.id.alarm_end_time);
+        mStartDate = (EditText) findViewById(R.id.alarm_start_date);
+        mEndDate = (EditText) findViewById(R.id.alarm_end_date);
         mDone = (Button) findViewById(R.id.done);
         mDone.setOnClickListener(new View.OnClickListener()
         {
@@ -92,16 +96,18 @@ public class EditAlarm extends Activity
         {
             Cursor alarm = mDbHelper.fetchAlarm(mRowId);
             startManagingCursor(alarm);
-            mName.setText(alarm.getString(
-                    alarm.getColumnIndexOrThrow(AlarmsDbAdapter.KEY_NAME)));
-            mNotes.setText(alarm.getString(
-                    alarm.getColumnIndexOrThrow(AlarmsDbAdapter.KEY_NOTES)));
-            mLocations.setText(alarm.getString(
-                    alarm.getColumnIndexOrThrow(AlarmsDbAdapter.KEY_LOCATIONS)));
-            mStartTime.setText(alarm.getString(
-                    alarm.getColumnIndexOrThrow(AlarmsDbAdapter.KEY_START_TIME)));
-            mEndTime.setText(alarm.getString(
-                    alarm.getColumnIndexOrThrow(AlarmsDbAdapter.KEY_END_TIME)));
+            mName.setText(alarm.getString(alarm.getColumnIndexOrThrow(AlarmsDbAdapter.KEY_NAME)));
+            mNotes.setText(alarm.getString(alarm.getColumnIndexOrThrow(AlarmsDbAdapter.KEY_NOTES)));
+            mLocations.setText(alarm.getString(alarm
+                    .getColumnIndexOrThrow(AlarmsDbAdapter.KEY_LOCATIONS)));
+            mStartTime.setText(alarm.getString(alarm
+                    .getColumnIndexOrThrow(AlarmsDbAdapter.KEY_START_TIME)));
+            mEndTime.setText(alarm.getString(alarm
+                    .getColumnIndexOrThrow(AlarmsDbAdapter.KEY_END_TIME)));
+            mStartDate.setText(alarm.getString(alarm
+                    .getColumnIndexOrThrow(AlarmsDbAdapter.KEY_START_DATE)));
+            mEndDate.setText(alarm.getString(alarm
+                    .getColumnIndexOrThrow(AlarmsDbAdapter.KEY_END_DATE)));
         }
     }
 
@@ -112,10 +118,13 @@ public class EditAlarm extends Activity
         String locations = mLocations.getText().toString();
         String startTime = mStartTime.getText().toString();
         String endTime = mStartTime.getText().toString();
+        String startDate = mStartDate.getText().toString();
+        String endDate = mEndDate.getText().toString();
 
         if (mRowId == null)
         {
-            long id = mDbHelper.createAlarm(name, notes, locations, startTime, endTime);
+            long id = mDbHelper.createAlarm(name, notes, locations, startTime, endTime, startDate,
+                    endDate);
             if (id > 0)
             {
                 mRowId = id;
@@ -123,7 +132,8 @@ public class EditAlarm extends Activity
         }
         else
         {
-            mDbHelper.updateAlarm(mRowId, name, notes, locations, startTime, endTime);
+            mDbHelper.updateAlarm(mRowId, name, notes, locations, startTime, endTime, startDate,
+                    endDate);
         }
     }
 }
