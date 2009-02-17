@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:text="@string/alarm_name" />
 
-        <EditText android:id="@+id/alarm_name"
+        <AutoCompleteTextView android:id="@+id/alarm_name"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"/>
 

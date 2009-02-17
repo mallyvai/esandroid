@@ -14,20 +14,23 @@ public final class R {
         public static final int icon=0x7f020000;
     }
     public static final class id {
-        public static final int alarm_end_date=0x7f050007;
-        public static final int alarm_end_time=0x7f050005;
-        public static final int alarm_locations=0x7f050003;
-        public static final int alarm_name=0x7f050001;
-        public static final int alarm_notes=0x7f050002;
+        public static final int alarm_end_date=0x7f050009;
+        public static final int alarm_end_time=0x7f050007;
+        public static final int alarm_locations=0x7f050005;
+        public static final int alarm_name=0x7f050003;
+        public static final int alarm_notes=0x7f050004;
         public static final int alarm_row=0x7f050000;
-        public static final int alarm_start_date=0x7f050006;
-        public static final int alarm_start_time=0x7f050004;
-        public static final int done=0x7f050008;
+        public static final int alarm_start_date=0x7f050008;
+        public static final int alarm_start_time=0x7f050006;
+        public static final int dateDisplay=0x7f050001;
+        public static final int done=0x7f05000a;
+        public static final int pickDate=0x7f050002;
     }
     public static final class layout {
         public static final int alarm_row=0x7f030000;
-        public static final int edit_alarm=0x7f030001;
-        public static final int view_alarms=0x7f030002;
+        public static final int date_and_time=0x7f030001;
+        public static final int edit_alarm=0x7f030002;
+        public static final int view_alarms=0x7f030003;
     }
     public static final class string {
         public static final int alarm_done=0x7f040009;

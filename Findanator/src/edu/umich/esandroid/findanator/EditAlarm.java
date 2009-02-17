@@ -1,15 +1,19 @@
 package edu.umich.esandroid.findanator;
 
+import java.util.ArrayList;
+
 import android.app.Activity;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 
 public class EditAlarm extends Activity
 {
-    private EditText mName;
+    private AutoCompleteTextView mName;
     private EditText mNotes;
     private EditText mLocations;
     private EditText mStartTime;
@@ -32,7 +36,14 @@ public class EditAlarm extends Activity
 
         // Set up UI
         setContentView(R.layout.edit_alarm);
-        mName = (EditText) findViewById(R.id.alarm_name);
+        mName = (AutoCompleteTextView) findViewById(R.id.alarm_name);
+        String[] alarmNames = getAllAlarmNames();
+        if (alarmNames != null)
+        {
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                    android.R.layout.simple_dropdown_item_1line, alarmNames);
+            mName.setAdapter(adapter);
+        }
         mNotes = (EditText) findViewById(R.id.alarm_notes);
         mLocations = (EditText) findViewById(R.id.alarm_locations);
         mStartTime = (EditText) findViewById(R.id.alarm_start_time);
@@ -135,5 +146,29 @@ public class EditAlarm extends Activity
             mDbHelper.updateAlarm(mRowId, name, notes, locations, startTime, endTime, startDate,
                     endDate);
         }
+    }
+
+    private String[] getAllAlarmNames()
+    {
+        Cursor c = mDbHelper.fetchAllAlarms();
+        int numRows = c.getCount();
+        if (numRows <= 0)
+        {
+            // There are no alarms in the database
+            return null;
+        }
+        String[] names = new String[numRows];
+        int namePos = c.getColumnIndexOrThrow(AlarmsDbAdapter.KEY_NAME);
+        if (!c.moveToFirst())
+        {
+            return null;
+        }
+        int i = 0;
+        names[i++] = c.getString(namePos);
+        while (c.moveToNext())
+        {
+            names[i++] = c.getString(namePos);
+        }
+        return (String[]) names;
     }
 }
