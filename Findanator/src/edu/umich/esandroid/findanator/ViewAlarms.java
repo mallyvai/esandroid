@@ -116,7 +116,9 @@ public class ViewAlarms extends ListActivity
         switch (item.getItemId())
         {
         case INSERT_ID:
-            createAlarm();
+            //createAlarm();
+            Intent i = new Intent(this, DateAndTime.class);
+            startActivity(i);
             return true;
         }
         return super.onMenuItemSelected(featureId, item);

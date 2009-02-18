@@ -13,5 +13,6 @@
         </activity>
 
 <activity android:name=".EditAlarm"></activity>
+<activity android:name=".DateAndTime"></activity>
 </application>
 </manifest>

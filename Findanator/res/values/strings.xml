@@ -12,4 +12,9 @@
 	<string name="alarm_done">Done</string>
 	<string name="alarm_start_date">Start Date:</string>
 	<string name="alarm_end_date">End Date:</string>
+	<string name="date_time_start_date">Start Date</string>
+	<string name="date_time_end_date">End Date</string>
+	<string name="date_time_start_time">Start Time</string>
+    <string name="date_time_end_time">End Time</string>
+    <string name="date_time_change">Change</string>
 </resources>

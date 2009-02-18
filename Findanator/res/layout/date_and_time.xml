@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date_time_start_date" />
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   " />
+
+	    <TextView android:id="@+id/date_time_start_date"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android_layout_weight="1"
+	            android:text=""/>
+
+	    <Button android:id="@+id/date_time_pick_start_date"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/date_time_change"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+         <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date_time_end_date" />
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   " />
+
+        <TextView android:id="@+id/date_time_end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""/>
+
+        <Button android:id="@+id/date_time_pick_end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date_time_change"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+         <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date_time_start_time" />
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   " />
+
+        <TextView android:id="@+id/date_time_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android_layout_weight="1"
+                android:text=""/>
+
+        <Button android:id="@+id/date_time_pick_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date_time_change"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+         <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date_time_end_time" />
+
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   " />
+
+        <TextView android:id="@+id/date_time_end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android_layout_weight="1"
+                android:text=""/>
+
+        <Button android:id="@+id/date_time_pick_end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date_time_change"/>
+
+    </LinearLayout>
+
+</LinearLayout>
