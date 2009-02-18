@@ -72,114 +72,120 @@
                     android:layout_height="fill_parent" />
 
             </LinearLayout>
+            
+            <ScrollView
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:id="@+id/edit_alarm_times_tab">
-
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/edit_alarm_start_date" />
-
-                    <TextView android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="   " />
-
-                    <TextView android:id="@+id/edit_alarm_start_date"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android_layout_weight="1"
-                            android:text=""/>
-
-                    <Button android:id="@+id/edit_alarm_pick_start_date"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/edit_alarm_change"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content" >
-
-                     <TextView android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/edit_alarm_end_date" />
-
-                    <TextView android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="   " />
-
-                    <TextView android:id="@+id/edit_alarm_end_date"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text=""/>
-
-                    <Button android:id="@+id/edit_alarm_pick_end_date"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/edit_alarm_change"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content" >
-
-                     <TextView android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/edit_alarm_start_time" />
-
-                    <TextView android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="   " />
-
-                    <TextView android:id="@+id/edit_alarm_start_time"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android_layout_weight="1"
-                            android:text=""/>
-
-                    <Button android:id="@+id/edit_alarm_pick_start_time"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/edit_alarm_change"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content" >
-
-                     <TextView android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/edit_alarm_end_time" />
-
-                    <TextView android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="   " />
-
-                    <TextView android:id="@+id/edit_alarm_end_time"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android_layout_weight="1"
-                            android:text=""/>
-
-                    <Button android:id="@+id/edit_alarm_pick_end_time"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/edit_alarm_change"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
+	            <LinearLayout
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:orientation="vertical"
+	                android:id="@+id/edit_alarm_times_tab">
+	
+	                <LinearLayout
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="wrap_content" >
+	
+	                    <TextView android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:text="@string/edit_alarm_start_date" />
+	
+	                    <TextView android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:text="   " />
+	
+	                    <TextView android:id="@+id/edit_alarm_start_date"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android_layout_weight="1"
+	                            android:text=""/>
+	
+	                    <Button android:id="@+id/edit_alarm_pick_start_date"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:text="@string/edit_alarm_change"/>
+	
+	                </LinearLayout>
+	
+	                <LinearLayout
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="wrap_content" >
+	
+	                     <TextView android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:text="@string/edit_alarm_end_date" />
+	
+	                    <TextView android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:text="   " />
+	
+	                    <TextView android:id="@+id/edit_alarm_end_date"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:layout_weight="1"
+	                            android:text=""/>
+	
+	                    <Button android:id="@+id/edit_alarm_pick_end_date"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:text="@string/edit_alarm_change"/>
+	
+	                </LinearLayout>
+	
+	                <LinearLayout
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="wrap_content" >
+	
+	                     <TextView android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:text="@string/edit_alarm_start_time" />
+	
+	                    <TextView android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:text="   " />
+	
+	                    <TextView android:id="@+id/edit_alarm_start_time"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android_layout_weight="1"
+	                            android:text=""/>
+	
+	                    <Button android:id="@+id/edit_alarm_pick_start_time"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:text="@string/edit_alarm_change"/>
+	
+	                </LinearLayout>
+	
+	                <LinearLayout
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="wrap_content" >
+	
+	                     <TextView android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:text="@string/edit_alarm_end_time" />
+	
+	                    <TextView android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:text="   " />
+	
+	                    <TextView android:id="@+id/edit_alarm_end_time"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android_layout_weight="1"
+	                            android:text=""/>
+	
+	                    <Button android:id="@+id/edit_alarm_pick_end_time"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:text="@string/edit_alarm_change"/>
+	
+	                </LinearLayout>
+	
+	            </LinearLayout>
+            
+            </ScrollView>
 
         </FrameLayout>
 
