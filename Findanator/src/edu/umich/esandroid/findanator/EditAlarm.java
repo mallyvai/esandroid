@@ -167,27 +167,26 @@ public class EditAlarm extends TabActivity
 
     private String[] getAllAlarmNames()
     {
-        return new String[] {"alarm1", "alarm2", "alarm3"};
-//        Cursor c = mDbHelper.fetchAllAlarms();
-//        int numRows = c.getCount();
-//        if (numRows <= 0)
-//        {
-//            // There are no alarms in the database
-//            return null;
-//        }
-//        String[] names = new String[numRows];
-//        int namePos = c.getColumnIndexOrThrow(AlarmsDbAdapter.KEY_NAME);
-//        if (!c.moveToFirst())
-//        {
-//            return null;
-//        }
-//        int i = 0;
-//        names[i++] = c.getString(namePos);
-//        while (c.moveToNext())
-//        {
-//            names[i++] = c.getString(namePos);
-//        }
-//        return (String[]) names;
+        Cursor c = mDbHelper.fetchAllAlarms();
+        int numRows = c.getCount();
+        if (numRows <= 0)
+        {
+            // There are no alarms in the database
+            return null;
+        }
+        String[] names = new String[numRows];
+        int namePos = c.getColumnIndexOrThrow(AlarmsDbAdapter.KEY_NAME);
+        if (!c.moveToFirst())
+        {
+            return null;
+        }
+        int i = 0;
+        names[i++] = c.getString(namePos);
+        while (c.moveToNext())
+        {
+            names[i++] = c.getString(namePos);
+        }
+        return (String[]) names;
     }
 
     private void setupUI()
