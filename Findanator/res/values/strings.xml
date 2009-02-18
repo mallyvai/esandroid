@@ -12,11 +12,14 @@
 	<string name="alarm_done">Done</string>
 	<string name="alarm_start_date">Start Date:</string>
 	<string name="alarm_end_date">End Date:</string>
-	<string name="date_time_start_date">Start Date</string>
-	<string name="date_time_end_date">End Date</string>
-	<string name="date_time_start_time">Start Time</string>
-    <string name="date_time_end_time">End Time</string>
-    <string name="date_time_change">Change</string>
-    <string name="edit_notes_notes">Notes</string>
-    <string name="edit_locations_locations">Locations</string>
+	<string name="edit_alarm_name">Name</string>
+	<string name="edit_alarm_notes">Notes</string>
+	<string name="edit_alarm_locations">Locations</string>
+	<string name="edit_alarm_times">Times</string>
+	<string name="edit_alarm_start_date">Start Date</string>
+	<string name="edit_alarm_end_date">End Date</string>
+	<string name="edit_alarm_start_time">Start Time</string>
+	<string name="edit_alarm_end_time">End Time</string>
+	<string name="edit_alarm_change">Change</string>
+	<string name="edit_alarm_done">Done</string>
 </resources>
