@@ -17,4 +17,6 @@
 	<string name="date_time_start_time">Start Time</string>
     <string name="date_time_end_time">End Time</string>
     <string name="date_time_change">Change</string>
+    <string name="edit_notes_notes">Notes</string>
+    <string name="edit_locations_locations">Locations</string>
 </resources>

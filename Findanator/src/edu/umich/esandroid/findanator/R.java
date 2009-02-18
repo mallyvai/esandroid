@@ -31,12 +31,16 @@ public final class R {
         public static final int date_time_start_date=0x7f050001;
         public static final int date_time_start_time=0x7f050005;
         public static final int done=0x7f050010;
+        public static final int edit_locations=0x7f050011;
+        public static final int edit_notes=0x7f050012;
     }
     public static final class layout {
         public static final int alarm_row=0x7f030000;
         public static final int date_and_time=0x7f030001;
         public static final int edit_alarm=0x7f030002;
-        public static final int view_alarms=0x7f030003;
+        public static final int edit_locations=0x7f030003;
+        public static final int edit_notes=0x7f030004;
+        public static final int view_alarms=0x7f030005;
     }
     public static final class string {
         public static final int alarm_done=0x7f040009;
@@ -53,6 +57,8 @@ public final class R {
         public static final int date_time_end_time=0x7f04000f;
         public static final int date_time_start_date=0x7f04000c;
         public static final int date_time_start_time=0x7f04000e;
+        public static final int edit_locations_locations=0x7f040012;
+        public static final int edit_notes_notes=0x7f040011;
         public static final int hello=0x7f040000;
         public static final int menu_add_alarm=0x7f040003;
         public static final int menu_delete_alarm=0x7f040002;
