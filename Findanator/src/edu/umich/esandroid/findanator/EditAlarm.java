@@ -1,3 +1,16 @@
+/*
+ * Copyright (C) 2009 Gopalkrishna Sharma, Nader Jawad, Vaibhav Mallya.
+ *
+ * Author: Gopalkrishna Sharma
+ * Email: gopalkri@umich.edu
+ * Date started: 16 / February / 2009
+ *
+ * This file is part of Team ESAndroid's project for EECS 498 Winter 2009 with Prof. Soloway.
+ * Team members: Gopalkrishna Sharma (gopalkri@umich.edu),
+ * Nader Jawad (njawad@umich.edu), Vaibhav Mallya (mallyvai@umich.edu).
+ *
+ */
+
 package edu.umich.esandroid.findanator;
 
 import java.util.Calendar;
