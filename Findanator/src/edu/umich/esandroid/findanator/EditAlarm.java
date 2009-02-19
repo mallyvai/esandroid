@@ -196,7 +196,7 @@ public class EditAlarm extends TabActivity
                 R.id.edit_alarm_name_tab));
         mTabHost.addTab(mTabHost.newTabSpec("tab_test2").setIndicator("Notes").setContent(
                 R.id.edit_alarm_notes_tab));
-        mTabHost.addTab(mTabHost.newTabSpec("tab_test3").setIndicator("Locations").setContent(
+        mTabHost.addTab(mTabHost.newTabSpec("tab_test3").setIndicator("Places").setContent(
                 R.id.edit_alarm_locations_tab));
         mTabHost.addTab(mTabHost.newTabSpec("tab_test4").setIndicator("Times").setContent(
                 R.id.edit_alarm_times_tab));
